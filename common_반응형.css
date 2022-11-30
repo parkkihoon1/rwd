@@ -1,0 +1,722 @@
+@charset "utf-8";
+/* 초기화 */
+body, h1, h2, h3, h4, p, ul, dl, dd, button {
+    margin:0;
+    padding:0;
+}
+ul li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color:black;
+}
+.hidden {
+    position:absolute;
+    left: -9999px;
+}
+* {
+    box-sizing: border-box;
+}
+hr {
+    /* display: none; */
+    color: gray;
+}
+button {
+    border: none;
+}
+
+/* 헤더 */
+#headerWrap {
+    position: absolute; top: 0; left: 0; z-index: 999;
+    width: 100%; height: 100px;
+    transition: 0.5s;
+    overflow: hidden;
+
+}
+
+#header {
+    position: relative; max-width: 1440px; margin: 0 auto; color:#fff;
+}
+#header #langSelector {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#header #sideMenu {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+#header #sideMenu > a {
+    position: relative;
+    padding: 0px 10px;
+}
+#header #sideMenu > a:not(:first-child)::after {
+    content: "";
+    position: absolute; top: 4px; left: -3px;
+    height: 15px;
+    border-left: 1px solid #fff;
+}
+#header h1 {
+    display: flex;
+    justify-content: center;
+}
+#header #gnb {
+    display: flex;
+    justify-content: center;
+}
+
+
+/* gnb */
+#gnbList {display:flex; justify-content: center; padding: 30px; }
+#gnbList > li { padding: 0 30px; margin: 0 10px;}
+#gnbList > li > a { display: block; height: 52px; color:#fff;  }
+
+
+/* 서브메뉴 snb */
+
+
+#gnbList li .snb li {
+    margin: 10px 0px 0px 0px;
+}
+#gnbList li .snb li a {
+    transition: 2s;
+}
+
+#sideMenu a {
+    color: #fff;
+}
+
+
+/* 검색 */
+#serachWrap { display: none;}
+
+/* 메인 슬라이더 */
+#mainSlider { }  /* 수정=------------------------------------------ */
+#mainSliderList {position:relative; width: 100%; height: 40vw; }
+#mainSliderList li { position: absolute; top: 0; left: 0; width: 100%; height: 40vw; }
+#mainSliderList li.mainSlider1 { background:url(../img/banner1.jpg) no-repeat center/ cover; }
+#mainSliderList li.mainSlider2 { background:url(../img/banner2.jpg) no-repeat center/ cover; }
+#mainSliderList li.mainSlider3 { background:url(../img/banner3.jpg) no-repeat center/ cover; }
+ /* 수정=------------------------------------------ */
+#mainSliderList li a div { position: relative; max-width: 1440px;
+                     height: 100%; margin: 0 auto; }
+#mainSliderList li a div p:first-child { position: absolute; bottom: 15vw; 
+                                        left: 100px; color: #fff; font-size: 2vw;}  
+#mainSliderList li a div p:nth-child(2) { position: absolute; bottom: 10vw; 
+                                         left: 100px; color: #fff; font-size: 3vw;}
+
+                             
+#mainSlider .mainSliderBtn button { 
+    position: absolute; 
+    border : 0;
+    background : no-repeat center/ 30px 120px;
+    width: 30px;
+    height: 120px;
+    top: 20vw;
+    text-indent: -9999px;
+    z-index: 99;
+    cursor: pointer;
+}                        
+#mainSlider .mainSliderBtn .mainBtnPrev { 
+                                           left: 50px;   
+                                           /* background-image: url(../img/prevBtn.svg); */
+                                         }                                        
+#mainSlider .mainSliderBtn .mainBtnNext {  
+                                           right: 50px; 
+                                           /* background-image: url(../img/nextBtn.svg); */
+                                         }    
+
+#mainSlider .mainSliderBtn .play {
+                                /* background:  url(../img/pause.png) no-repeat center/30px 30px;  */
+                                width: 60px; height: 200px; top: 28vw; left: 30vw;  }
+                                         
+
+
+#good { 
+    max-width: 1440px;
+    width: calc(100vw - 17px);
+    height: 800px; /* 조정 */
+    margin: 0 auto; 
+    overflow: hidden; 
+    position: relative;
+    padding-top: 100px;
+
+}
+#good > h3 {
+    font-size: 2vw;
+    padding: 30px 0;
+    margin-left: 10px;
+}
+#good > .goodList{ 
+    display: flex;
+    flex : 1;
+    height: 600px; 
+    /* max-width: 2880px; */
+    width: 200%;
+    transition: 0.5s;
+}
+    /* 수정=------------------------------------------ */
+
+.goodList > a { 
+    width: 100%;
+    /* 조정 */
+    height: 450px; 
+    margin: 10px;
+    }
+.goodList a:nth-child(1) {
+    background: url(../img/best1.jpg) no-repeat center center / cover;
+}
+.goodList a:nth-child(2){
+    background: url(../img/best2.jpg) no-repeat center center / cover;
+}
+.goodList a:nth-child(3) {
+    background: url(../img/best3.jpg) no-repeat center center / cover;
+}
+.goodList a:nth-child(4) {
+    background: url(../img/best4.jpg) no-repeat center center / cover;
+}
+.goodList a:nth-child(5) {
+    background: url(../img/best5.jpg) no-repeat center center / cover;
+}
+.goodList a:nth-child(6) {
+    background: url(../img/best6.jpg) no-repeat center center / cover;
+}
+
+.goodList > a > dl{
+    display: flex; 
+    flex-direction: column;               
+    align-items: center; 
+    justify-content: center;               
+    line-height: 30px; 
+    margin: 450px auto 0;
+    height: 150px;
+    width: 24vw;
+}
+
+.goodList > a > dl > dd {color: rgb(156, 156, 156);}
+.goodList > a > dl > dt:nth-child(1){color: #000;
+                        font-weight: bold;
+                        font-size: 1.5vw;}
+.goodList > a > dl > dt:nth-child(3){color: #000;
+                            font-size: 16px;}
+
+#good .goodBtn button {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    text-indent: -9999px;
+    cursor: pointer;
+}
+
+#good .goodBtn .play{  
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    text-indent: -9999px;
+    bottom: 0;
+    left: 50%;
+    background: url(../img/pause.png) no-repeat center/20px 20px;
+}
+
+#good .goodBtn .mainBtnPrev { 
+    top: 400px;
+    left: 0; 
+    background: url(../img/prevBlack.png) no-repeat center/50px 50px;   }
+#good .goodBtn .mainBtnNext {
+    top: 400px;
+    right: 0;
+    background: url(../img/nextBlack.png) no-repeat center/50px 50px;
+                            }
+
+/* 수정=------------------------------------------ */
+#bestWrap {max-width: 1440px;
+            width: calc(100% - 30px); 
+            height: 30vw; 
+            margin: 0 auto; 
+            display: block;
+            position: relative;
+            margin-top: 5vw;
+            background: url(../img/bestSeller.jpg) no-repeat right center/ cover ;}
+#best h2{ font-size: 2vw; position: absolute; bottom: 12vw; left: 10vw;}
+#best p{position: absolute; bottom: 9vw; left: 10vw; font-size: 1vw;}
+#best span{border: 1px solid #000; padding: 10px;
+position: absolute; bottom: 5vw; left: 10vw; font-size: 1vw;}
+
+
+
+main {
+    width: 100%;
+}
+
+/* 설화수 시즌 추천 #season */
+#season {
+    /* background-color: lightcoral; */
+    max-width: 1440px;
+    width: calc(100vw - 17px);
+    height: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+
+    padding-top: 100px;
+}
+
+#season > h3 {
+    padding: 30px 0;
+    font-size: 2vw;
+    margin-left: 10px;
+}
+#season > .seasonList{
+    display : flex;
+    flex:1;
+    height: 40vw;
+    max-width: 2880px;
+    width: 200%;
+    transition: 0.5s;
+}
+.seasonList > a {
+    flex: 1;
+    /* width: 340px; */
+    height: 500px;
+    margin: 0 10px;
+}
+.seasonList a:nth-child(1) {
+    background: #ededed url(../img/season1.png) no-repeat center top/340px 340px;
+}
+.seasonList a:nth-child(2) {
+    background: url(../img/season2.jpg) no-repeat center center/cover;
+}
+.seasonList a:nth-child(3) {
+    background:  #ededed url(../img/season3.png) no-repeat center top/340px 340px;
+}
+.seasonList a:nth-child(4) {
+    background: #ededed url(../img/season4.jpg) no-repeat center top/340px 340px;
+}
+.seasonList a:nth-child(5) {
+    background: url(../img/season5.jpg) no-repeat center center/cover;
+}
+.seasonList a:nth-child(6) {
+    background: #ededed url(../img/season6.jpg) no-repeat center top/340px 340px;
+}
+.seasonList > a > dl{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    line-height: 30px;
+
+    margin: 350px auto 0;
+}
+.seasonList > a > dl > dt{
+    color:  black;
+    font-weight: bold;
+    font-size: 1.1vw;
+}
+.seasonList > a > dl > dd{
+    color:  rgb(156, 156, 156);
+    font-size: 0.7vw;
+}
+.seasonList .center {
+    flex: 2;
+    /* width: 680px; */
+    margin: 0 10px;
+}
+.seasonList .center dl {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 4vw;
+
+}
+.seasonList .center dl dt {
+    font-size: 1.1vw;
+    color: black;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.seasonList .center dl dd {
+    color: rgb(104, 104, 104);
+    font-size: 1vw;
+}
+#season .seasonBtn button{
+   position: absolute;
+   width: 50px;
+   height: 50px;
+   text-indent: -9999px;
+   cursor: pointer;
+}
+
+#season .seasonBtn .play {
+    width: 20px;
+    height: 20px;
+    bottom: 50px;
+    left: 50%;
+    background: url(../img/pause.png) no-repeat center/30px 30px;
+
+}
+#season .seasonBtn .mainBtnPrev {
+    top: 400px;
+    left: 0;    
+    background: url(../img/prevBlack.png) no-repeat center/50px 50px;
+}
+
+
+#season .seasonBtn .mainBtnNext {
+    top: 400px;
+    right: 0;
+    background: url(../img/nextBlack.png) no-repeat center/50px 50px;
+}
+
+
+/* 마이 지함보 포장 서비스 */
+#lower {
+    /* background-color: lightgoldenrodyellow; */
+    max-width: 1440px;
+
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+}
+#lower a {
+    display: block;
+    max-width: 700px;
+    width: 40vw;
+    margin: 10px;
+    
+
+    /* border: 1px solid black; */
+}
+
+#lower a div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin:0 auto ;
+    width: 40vw;
+    height: 150px;
+    bottom: 0;
+    max-height: 650px;
+    max-width: 500px;
+    color: black;
+}
+
+#lower a:nth-child(2){
+    /* background: url(../img/마이지함보.jpg) no-repeat center top /700px 500px; */
+} 
+#lower a:nth-child(3){
+    /* background: url(../img/북촌.jpg) no-repeat center top /700px 500px; */
+}
+#lower a:nth-child(2)::before {
+    content: "";
+    display: block;
+    max-width: 650px;
+    max-height: 500px;
+    width: 40vw;
+    height: 40vw;
+    /* margin: 20px; */
+    
+    background: url(../img/마이지함보.jpg) no-repeat center top /cover;
+}
+#lower a:nth-child(3)::before {
+    content: "";
+    display: block;
+    max-width: 650px;
+    max-height: 500px;
+    width: 40vw;
+    height: 40vw;
+    /* margin: 20px; */
+    
+    background: url(../img/북촌.jpg) no-repeat center top /cover ;
+}
+    
+
+#lower a div .btnmore {
+    border: 1px solid black;
+    margin-top: 20px;
+    width: 150px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+}
+
+#service h3 {
+    font-size: 28px;
+}
+#store h3 {
+    font-size: 28px;
+}
+
+
+
+
+
+
+
+/* 인스타그램 홍보리스트 */
+#withSulwhasoo { overflow: hidden; 
+    padding: 50px 0;  
+    max-width: 1440px; 
+    position: relative; 
+    margin: 0 auto; }
+
+/* #withSulwhasoo::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 10vw;
+    margin: 20px;
+} */
+
+#withSulwhasoo h2 { font-size: 28px;}
+#withInner {  max-width: 1440px; margin: 20px auto; display: flex;  }
+#withInner ul { width: 4320px; margin-top: 50px; 
+                justify-content: space-between; }                
+#withInner li a {width: 300px; height: 300px; margin: 0 1%; float: left;
+                 background: #eecccc; margin-bottom: 10px; margin-left: 10px;}
+
+/* 인스타그램 버튼 */
+#withSulwhasoo .btnWrap button {
+    position: absolute;
+    top: 100px;
+    height: 320px;
+    width: 50px;
+    text-indent: -9999px;
+    cursor: pointer;
+}
+
+.btnWrap .next { 
+    right: 0;
+    background: rgba(255,255,255,0.5) url(../img/nextBtn.svg) no-repeat center / 32px; }  
+.btnWrap .prev { 
+    left: 0;
+    background: rgba(255,255,255,0.5) url(../img/prevBtn.svg) no-repeat center / 32px; } 
+
+
+
+/* footer */
+.footer1 { max-width: 1100px; margin: 0 auto; display: flex;
+            justify-content: space-between;
+            /* border-top: 1px solid gray; */
+           }
+
+.footer1 > ul {
+            display: flex;
+}
+.footer1 > ul > li {
+    margin: 10px 10px 0px 0px;
+    position: relative;
+}
+
+.footer1 > ul > li > a:hover {
+    border-bottom: 1px solid #9b9a9a;
+}
+
+.footer1 > ul > li:not(:nth-child(4)) > a {
+    color: #9b9a9a;
+}
+
+.footer1 > ul > li:not(:first-child)::after {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: -5px;
+    height: 15px;
+    border-left: 1px solid rgb(172, 169, 169);
+
+}
+
+.infoWrap {
+    max-width: 1100px; margin: 0 auto;
+    height: 100px;
+}
+.infoWrap > p {
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: #9b9a9a;
+}
+.infoWrap > small {
+    color: #9b9a9a;
+}
+.infoWrap > small:nth-child(2) {
+    text-transform: uppercase;
+}
+
+.footer1 > ul >  li:nth-child(1) > a > img {
+    width: 50px;
+    height: 30px;
+}
+
+
+
+
+
+/* 수정=------------------------------------------ */
+
+/* 1081 이상 */
+@media all and ( min-width: 1081px) {
+    #gnbList .snb { 
+        position: absolute; 
+        top: 100px; 
+        height: 0px; 
+        padding: 20px 0;
+        /* display:flex; */
+        flex-direction: column;
+        display:none;
+    }
+    #headerWrap.on  {
+        background: white;
+        height: 300px;
+    }
+    #headerWrap.on #header #gnb #gnbList .snb {
+        display:flex;
+    
+    }
+    #headerWrap.on #header #gnb #gnbList li a{
+        color:#000;
+    
+    }
+    #headerWrap.on #header #sideMenu a {
+        color:#000;
+    
+    }
+    #headerWrap.on #header #sideMenu > a:not(:first-child)::after {
+        border-left: 1px solid #000;
+    
+    }   
+    
+    #headerWrap.on #header {
+        color: #eb6109;
+    }
+}
+/* 1080 이하 */
+@media all and ( max-width: 1080px ) {
+
+    #headerWrap.on {
+        height: 100px;
+    }
+    #gnbList .snb { position: relative; top: 0; height: auto; padding: 0;
+        /* display:block; */
+    }
+
+    #mainSliderList li a div p:first-child { font-size: 15px;}  
+    #mainSliderList li a div p:nth-child(2) {  font-size: 30px;}
+    
+    #sideMenu a:not(:nth-child(3)) {
+        display:none;
+    }
+    #sideMenu a:not(:nth-child(2))::after {
+        display:none;
+    }
+    #langSelector {
+        display: none;
+    }
+    .gnbView { display: block; position: absolute; top: 30px; left: 30px;
+        width: 40px; height: 40px;
+         }
+    .gnbView::before { content: "";
+                position: absolute; top: 12px; left: 5px;
+                width: 30px; height: 2px;
+                background: #000; 
+ }
+    .gnbView::after { content: "";
+                position: absolute; top: 24px; left: 5px;
+                width: 30px; height: 2px;
+                background: #000; transition: 0.2s; }
+ 
+    #gnb { position: fixed; top: 0; left: -100%;
+        width: 100%; height: 100vh;
+        margin: 0;
+        background: #eb6109;
+        transition: 0.5s;
+        z-index: 9999;
+    }
+    #gnb ul { display: block; }
+    #gnb ul li { line-height: 50px; text-align: center; }
+   
+
+    .footer1 .footerText {
+        display:none;
+    }
+    .footer1 {
+        justify-content: center;
+    }
+    .footer1 .footerImage li:nth-child(1){
+        display:none;
+    }
+    .footer1 .footerImage li:after {
+        display:none;
+    }
+
+    .infoWrap p {
+        display:none;
+    }
+    
+    #gnb .gnbListBtn {
+        top: 0;
+        left: 0;
+        width: 50px;
+        height: 50px;
+        /* display : block; */
+    }
+
+
+    /* 800이하 */
+    @media all and ( max-width: 800px ) {
+        #good .goodList {
+            width: 600%;
+        }
+        #bestWrap {
+            height: 700px;
+        }
+        #bestWrap #best h2{ font-size : 25px;
+                            bottom: 120px}
+        #bestWrap #best p{ font-size: 12px;
+                            bottom : 80px}
+        #bestWrap #best span{
+                        bottom : 30px;
+        }
+
+        #season {
+            display: flex;
+            flex-wrap: wrap;
+            height: auto;
+            max-width: none;
+            width: 100%;
+        }
+        #season h3 {
+            width: 100%;
+            order: -2;
+            height: 50px;
+        }
+        #season .seasonList > a {
+            display: block;
+        }
+        #season .seasonList .center {
+            order: -1;
+            width: 200vw;
+        }
+        #season > .seasonList {
+            height: auto;
+            max-width: 1600px;
+            /* 조정하기 */
+        }
+
+        .seasonList a:nth-child(1) {
+            background: #ededed url(../img/season1.png) no-repeat center top/cover;
+        }    
+        .seasonList a:nth-child(3) {
+            background:  #ededed url(../img/season3.png) no-repeat center top/cover;
+        }
+        .seasonList a:nth-child(4) {
+            background: #ededed url(../img/season4.jpg) no-repeat center top/cover;
+        } 
+        .seasonList a:nth-child(6) {
+            background: #ededed url(../img/season6.jpg) no-repeat center top/cover;
+        }
+
+        
+    }
+
+} 

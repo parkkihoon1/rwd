@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>설화, 다시피어나다. Sulwhasoo</title>
+        <link rel="stylesheet" href="./common_반응형.css">
+        <link rel="stylesheet" href="./jquery.bxslider.css">
+        <script src="./js/jquery-3.6.1.min.js"></script>
+        <script src="./js/jquery-ui.min.js"></script>
+        <script src="./js/jquery.bxslider.js"></script>
+        <script src="./js/common.js" defer></script>
+
+    </head>
+    <body>
+        <div id="headerWrap">
+            <header id="header">
+                <h1>Sulwhasoo</h1>
+                <select id="langSelector">
+                    <option value="Kor">한국/한국어</option>
+                    <option value="Eng">International/Englist</option>
+                    <option value="Chi">중국어</option>
+                    <option value="SingaporeEng">Singapore/English</option>
+                </select>
+                <div id="sideMenu">
+                        <a href="#">매장찾기</a>
+                        <a href="#">구매하기</a>
+                        <a href="#">검색하기</a>
+                </div>
+                <a href="#" class="gnbView"><span class="hidden">메뉴펼치기<span></a>
+                <nav id="gnb">
+                    <h2 class="hidden">설화수 주요이용메뉴</h2>
+                    <button class="hidden gnbListBtn">X</button>
+                    <ul id="gnbList">
+                        <li>
+                            <a href="#">브랜드 빌리프</a>
+                            <ul class="snb">
+                                <li><a href="#">브랜드 빌리프</a></li>
+                                <li><a href="#">브랜드 캠페인</a></li>
+                                <li><a href="#">뷰티 프롬 컬쳐</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">베스트 셀러</a></li>
+                        <li>
+                            <a href="#">제품</a>
+                            <ul class="snb">
+                                <li><a href="#">스킨케어</a></li>
+                                <li><a href="#">메이크업</a></li>
+                                <li><a href="#">남성</a></li>
+                                <li><a href="#">진설</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">설화수 포스트</a>
+                            <ul class="snb">
+                                <li><a href="#">설화수 포스트</a></li>
+                                <li><a href="#">명작컬렉션</a></li>
+                                <li><a href="#">설화수 스타일</a></li>
+                                <li><a href="#">설화문화전</a></li>
+                                <li><a href="#">설화매거진</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">스파</a>
+                            <ul class="snb">
+                                <li><a href="#">소개</a></li>
+                                <li><a href="#">스파 프로그램</a></li>
+                                <li><a href="#">예약</a></li>
+                                <li><a href="#">매장 찾기</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">플래그십 스토어</a>
+                            <ul class="snb">
+                                <li><a href="#">설화수 북촌</a></li>
+                                <li><a href="#">설화수 도산</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+
+                <form id="serachWrap">
+                    <fieldset>
+                        <legend>검색</legend>
+                        <input type="text" placeholder="검색어를 입력해주세요">
+                        <input type="button" value="검색">
+                    </fieldset>
+                    <button aria-label="searchClose">X</button>
+                </form>
+            </header>
+        </div>
+        <section id="mainSlider">
+            <h2 class="hidden">설화수 주요프로모션</h2>
+            <ul id="mainSliderList">
+                <li class="mainSlider1">
+                    <a href="#">
+                        <div>
+                            <p>First Care Activating Serum Limited Edition</p>
+                            <p>윤조에센스 백자에디션</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="mainSlider2">
+                    <a href="#">
+                        <div>
+                            <p>Sulwhasoo Rebloom</p>
+                            <p>설화, 다시피어나다</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="mainSlider3">
+                    <a href="#">
+                        <div>
+                            <p>Amore mall (10.10~10.16)</p>
+                            <p>자음생 라인, 단 7일 혜택</p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+
+            <div class="mainSliderBtn">
+                <button class="play">재생/정지</button>
+                <button class="mainBtnPrev">이전으로</button>
+                <button class="mainBtnNext">다음으로</button>
+            </div>
+        </section>
+        <div id="good">
+            <h2 class="hidden">설화수 추천 리스트</h2>
+            <h3>설화수 추천</h3>
+            <div class="goodList">
+                <a href="#" >
+                    <dl>
+                        <dt>자음수</dt>
+                        <dd>Essential Comfort Balancing Water</dd>
+                        <dt>68,000원</dt>
+                    </dl>
+                </a>
+                <a href="#">
+                    <dl>
+                        <dt>순행클렌징폼</dt>
+                        <dd>Gentle Cleansing Foam</dd>
+                        <dt>42,000원</dt>
+                    </dl>
+                </a>
+                <a href="#">
+                    <dl>
+                        <dt>퍼팩팅쿠션 SPF50+/PA+++</dt>
+                        <dd>Perfecting Cushion</dd>
+                        <dt>80,000원</dt>
+                    </dl>
+                </a>
+                <a href="#">
+                    <dl>
+                        <dt>윤조에센스</dt>
+                        <dd>First Care Activating Serum</dd>
+                        <dt>140,000원</dt>
+                    </dl>
+                </a>
+                <a href="#">
+                    <dl>
+                        <dt>자음생크림소프트</dt>
+                        <dd>Concentrated Ginseng Renewing Cream EX</dd>
+                        <dt>270,000원</dt>
+                    </dl>
+                </a>
+                <a href="#">
+                    <dl>
+                        <dt>자음생세럼</dt>
+                        <dd>Concentrated Ginseng Renewing SerumEX</dd>
+                        <dt>145,000원</dt>
+                    </dl>
+                </a>
+            </div>
+            <div class="goodBtn">
+                <button class="play">재생/정지</button>
+                <button class="mainBtnPrev">이전으로</button>
+                <button class="mainBtnNext">다음으로</button>
+            </div>
+        </div>
+
+        <a href="#" id="bestWrap">
+            <div id="best">
+                <h2>베스트 셀러</h2>
+                <p>건강하게 빛나고 힘 있게 채우는 <br>설화수의 시그니처케어</p>
+                    <span>자세히 보기</span>
+            </div>
+        </a>
+
+        <div id="season">
+            <h2 class="hidden">설화수 추천 리스트</h2>
+            <h3>설화수 시즌 추천</h3>
+            <div class="seasonList">
+                <a href="#">
+                    <dl>
+                        <dt>자음생세럼</dt>
+                        <dd>Concentrated Ginseng Renewing Serum EX</dd>
+                        <dt>145,000원</dt>
+                    </dl>
+                </a>
+                <a href="#" class='center'>
+                    <dl >
+                        <dt>자음생듀오</dt>
+                        <dd>안티에이징의 결정체, 진세노믹스</dd>
+                        <dd>자음생듀오로 피부 자생력을 키워주세요.</dd>
+                    </dl>
+                </a>
+                <a href="#">
+                    <dl>
+                        <dt>자음생크림소프트</dt>
+                        <dd>Concentrated Ginseng Renewing Cream EX</dd>
+                        <dt>270,000원</dt>
+                    </dl>
+                </a>
+                <a href="#">
+                    <dl>
+                        <dt>여윤팩</dt>
+                        <dd>Overnight Vitalizing Mask</dd>
+                        <dt>65,000원</dt>
+                    </dl>
+                </a>
+                <a href="#" class='center'>
+                    <dl >
+                        <dt>이브닝 팩케어</dt>
+                        <dd>저녁 손질시 피부결을 매끈하게,</dd>
+                        <dd>자는 동안엔 수분손실을 막아주세요.</dd>
+                    </dl>
+                </a>
+                <a href="#">
+                    <dl>
+                        <dt>옥용팩</dt>
+                        <dd>Clarifying Mask</dd>
+                        <dt>53,000원</dt>
+                    </dl>
+                </a>
+            </div>
+            <div class="seasonBtn">
+                <button class="mainBtnPrev">이전으로</button>
+                <button class="mainBtnNext">다음으로</button>
+                <button class="play">재생/정지</button>
+            </div>
+        </div>
+        <main>
+            <div id="lower">
+                <h2 class="hidden">설화수 포스터 프로모션</h2>
+                <a href="#">
+                    <div id="service">
+                        <h3>마이 지함보 포장 서비스</h3>
+                        <p class="btnmore">자세히 보기</p>
+                    </div>
+                </a>
+                <a href="#">
+                    <div id="store">
+                        <h3>설화수 북촌 플래그십 스토어</h3>
+                        <p class="btnmore">자세히 보기</p>
+                    </div>
+                </a>
+            </div>
+    
+            <section id="withSulwhasoo">
+              <h2>#With Sulwhasoo</h2>
+              <ul id="withInner">
+                  <li><a href="#">인스타그램 제품 홍보사진 1</a></li>
+                  <li><a href="#">인스타그램 제품 홍보사진 2</a></li>
+                  <li><a href="#">인스타그램 제품 홍보사진 3</a></li>
+                  <li><a href="#">인스타그램 제품 홍보사진 4</a></li>
+                  <li><a href="#">인스타그램 제품 홍보사진 5</a></li>
+                  <li><a href="#">인스타그램 제품 홍보사진 6</a></li>
+                  <li><a href="#">인스타그램 제품 홍보사진 7</a></li>
+                  <li><a href="#">인스타그램 제품 홍보사진 8</a></li>
+              </ul>
+              <div class="btnWrap">
+                  <button class="next">다음내용보기</button>
+                  <button class="prev">이전내용보기</button>
+              </div>
+            </section>
+        </main>
+
+        
+        <footer id="footer">
+            <hr>
+            <div class="footer1">
+              <ul class="footerText">
+                  <li><a href="#" target="_blank">회사소개</a></li>
+                  <li><a href="#" target="_blank">서비스이용약관</a></li>
+                  <li><a href="#" target="_blank">UGC이용약관</a></li>
+                  <li><a href="#" target="_blank">개인정보처리방침</a></li>
+                  <li><a href="#" target="_blank">영상정보처리방침</a></li>
+                  <li><a href="#" target="_blank">사이트맵</a></li>
+                  <li><a href="#" target="_blank">로그인</a></li>
+              </ul>
+              <ul class="footerImage">
+                  <li>
+                      <a href="http://www.wa.or.kr/board/list.asp?BoardID=0006" target="_blank"><img src="../img/wa.png" alt="wa인증마크"></a>
+                  </li>
+                  <li>
+                      <a href="https://www.facebook.com/sulwhasoo.official" target="_blank"><img src="../img/facebookLogo.png" alt="페이스북"></a>
+                  </li>
+                  <li>
+                      <a href="https://www.instagram.com/sulwhasoo.official/" target="_blank"><img src="../img/instaLogo.png" alt="인스타그램"></a>
+                  </li>
+                  <li>
+                      <a href="https://www.youtube.com/user/sulwhasookorea" target="_blank"><img src="../img/youtubeLogo.png" alt="유튜브"></a>
+                  </li>
+                  <li>
+                      <a href="https://accounts.kakao.com/login?continue=http%3A%2F%2Fpf.kakao.com%2F_mxehQxb%2Ffriend" target="_blank"><img src="../img/kakaoChannelLogo.png" alt="카카오채널"></a>
+                  </li>
+              </ul>
+            </div>
+            <hr>
+            <div class="infoWrap">
+                <p>
+                    고객서비스센터(수신자요금부담) : 080-023-5454
+                    (월~금:AM09:00~PM06:00)
+                </p>
+                <small>amorepacific corporation all</small><small> rights reserved.</small>
+            </div>
+        </footer>
+    
+    </body>
+</html>
